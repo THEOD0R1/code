@@ -1,0 +1,136 @@
+@use "mixins" as m;
+
+.productsContainer {
+  border-bottom: 1px solid rgb(185, 180, 180);
+  .cart-item {
+    margin-left: 10px;
+  }
+
+  .productInfoContainer {
+    @include m.flex-direction(column);
+    max-width: 150px;
+
+    .totalPriceForXProducts {
+      margin-top: 0px;
+    }
+
+    .product-name {
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .amountContainer {
+    max-width: 100px;
+  }
+  @include m.tablet {
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+#remove,
+#add {
+  border-radius: 50%;
+  background-color: rgb(163, 88, 154);
+  border: none;
+  @include m.size(calc(30px), calc(30px));
+}
+
+.cart {
+  position: fixed;
+  width: 100%;
+  max-height: 100%;
+  right: 0;
+  @include m.flex-direction(column);
+  @include m.flex-justify(space-between);
+  background: white;
+  visibility: hidden;
+  overflow: auto;
+
+  @include m.tablet() {
+    max-width: 35%;
+    height: 100%;
+  }
+}
+
+.show {
+  inset-block: 0;
+  visibility: visible;
+}
+
+.checkout {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background-color: rgb(163, 88, 154);
+  border: none;
+  border-radius: 10px;
+  @include m.tablet() {
+    cursor: pointer;
+  }
+}
+
+.cart-header {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.cart-header {
+  @include m.flex-justify(center);
+}
+
+#checkoutClose {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(100%, -50%);
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.cart-body {
+  @include m.flex-direction(column);
+  @include m.flex-align(start);
+  height: 100%;
+
+  article {
+    width: 100%;
+    @include m.flex(space-around, center);
+  }
+  @include m.tablet() {
+    article {
+      font-size: 14pt;
+    }
+  }
+}
+
+.cart-item > img {
+  @include m.size(100px, 100px);
+  object-fit: contain;
+  @include m.tablet() {
+    width: 150px;
+    object-fit: contain;
+  }
+}
+
+.cart-footer {
+  border-top: 1px solid black;
+  @include m.flex-direction(column);
+  @include m.flex-align(center);
+
+  .cart-footer__total {
+    width: 95%;
+    @include m.flex-direction(row);
+    @include m.flex-justify(space-between);
+    font-size: 1.5rem;
+    margin: 10px 0px 20px 0px;
+  }
+}
+
+.cart-footer > button {
+  padding-block: 10px;
+  width: 90%;
+  text-transform: uppercase;
+}

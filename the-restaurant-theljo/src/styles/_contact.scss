@@ -1,0 +1,22 @@
+@use "mixins" as m;
+
+.pageWrapper {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/contacthero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 430px;
+
+  .contactContainer {
+    @include m.infoBox;
+  }
+
+  .smIcons {
+    display: flex;
+    justify-content: space-around;
+  }
+}

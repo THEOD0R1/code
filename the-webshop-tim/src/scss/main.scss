@@ -1,0 +1,197 @@
+@use "mixins" as m;
+
+main {
+  #dummyProductsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    .productContainer {
+      height: 290px;
+      width: 45%;
+      margin: auto;
+      margin-bottom: 10px;
+      padding-top: 20px;
+      @include m.flex-direction(column);
+      @include m.flex(center, center);
+      border-radius: 5px;
+      background-color: rgba(128, 128, 128, 0.3);
+      .product__container__img {
+        max-width: 80%;
+        max-height: 200px;
+        overflow: hidden;
+        img {
+          @include m.size(100%, 100%);
+        }
+      }
+      .product__container__info {
+        text-align: center;
+        @include m.flex-direction(column);
+      }
+    }
+  }
+}
+@include m.tablet() {
+  main {
+    #dummyProductsContainer {
+      @include m.flex-justify(center);
+      .productContainer {
+        width: 20%;
+        margin: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.infoProduct {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+}
+
+.productPrice {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 45px 0px 12px 0px;
+}
+
+.productTitle {
+  font-size: 2rem;
+  border-bottom: 1px solid rgb(174, 174, 174);
+}
+
+.buyButton {
+  background-color: rgb(77, 36, 56);
+  color: white;
+  @include m.size(35px, 90%);
+  border-radius: 5px;
+  border: none;
+
+  @include m.tablet() {
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(97, 52, 74);
+    }
+  }
+}
+
+.imgsContainer {
+  width: 50vw;
+  margin-right: 15px;
+}
+
+.imgContainer {
+  margin: 0px 0px 5px 20px;
+}
+
+.productImg {
+  width: 50px;
+  margin-right: 5px;
+  @include m.tablet() {
+    cursor: pointer;
+    width: 95px;
+  }
+}
+
+.buyContainer {
+  margin: 0px 15px 50px 0px;
+}
+
+.productInStock {
+  margin: 0px 0px 13px 0px;
+  font-size: 15px;
+  color: grey;
+}
+
+.bigImgDiv {
+  margin: 30px 40px 5px 25px;
+  width: 40vw;
+}
+.bigImg {
+  width: 100%;
+  @include m.tablet() {
+    cursor: pointer;
+    max-width: 300px;
+  }
+}
+
+.clicked-style {
+  @include m.flex-direction(column);
+  @include m.flex-align(center);
+
+  .productsContainer {
+    @include m.flex-justify(space-between);
+    width: 100%;
+
+    @include m.tablet() {
+      width: 40%;
+    }
+  }
+
+  cart-item {
+    margin-right: 30px;
+  }
+
+  .productInfoContainer {
+    margin-right: 30px;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .amountContainer {
+    text-align: end;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #add {
+    height: calc(30px);
+    margin-left: 10px;
+  }
+
+  #remove {
+    height: calc(30px);
+    margin-right: 10px;
+  }
+
+  .shopping-cart-xProducts {
+    margin: 5px 0px 0px 0px;
+  }
+
+  .totalPriceForXProducts {
+    text-align: center;
+  }
+
+  #cart__footer__total {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  .checkoutContainer {
+    @include m.flex(space-evenly, center);
+    width: 100%;
+  }
+
+  #totalPriceTitel {
+    font-size: 1.5rem;
+  }
+
+  #checkoutBuyButton {
+    @include m.size(25px, 50%);
+
+    margin: 0px 0px 20px 0px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+    @include m.tablet() {
+      @include m.size(30px, 30%);
+      width: 30%;
+      height: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}

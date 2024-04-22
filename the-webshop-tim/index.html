@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell it or buy it?</title>
+    <link rel="stylesheet" href="src/scss/style.scss" />
+    <script
+      src="https://kit.fontawesome.com/7673cc1434.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="home" class="header">
+      <div id="dropDown" class="header__bottom__dropdown">
+        <nav id="headerNav">
+          <div>
+            <h3 class="headerNav__home__button">
+            <a href="home">Hem</a>
+            </h3>
+          </div>
+          <h3>Kategorier</h3>
+          <ul id="headerListWrapper" class="header__list__wrapper">
+          </ul>
+        </nav>
+        <i id="closeNav" class="fa-solid fa-xmark"></i>
+      </div>
+      <section class="header__top">
+        <p class="header__top-text">
+          <i id="header__top-check" class="fa-solid fa-check"></i>Fri frakt över
+          500kr
+        </p>
+        <p class="header__top-text">
+          <i id="header__top-check" class="fa-solid fa-check"></i
+          >Expressleverans
+        </p>
+      </section>
+      <section class="header__middle">Wide Range Wares</section>
+      <section class="header__bottom">
+        <article class="header__bottom-search">
+          <button id="hambButton">
+            <i id="hambIcon" class="fa-solid fa-bars"></i>
+          </button>
+          <form id="search">
+            <input
+              id="userInput"
+              type="text"
+              placeholder="Sök efter produkt här..."
+            />
+            <button class="header__bottom-button">
+              <i
+                id="header__button-search"
+                class="fa-solid fa-magnifying-glass"
+              ></i>
+            </button>
+          </form>
+          <article class="header__bottom-icon">
+            <p id="header__bottom-icon--amount"></p>
+            <i id="shopping-bag" class="fa-solid fa-bag-shopping"></i>
+      
+          </article>
+        </article>
+      </section>
+      <section class="header__sale">
+        <p class="header__sale-text">REA UPP TILL 50%</p>
+      </section>
+    </header>
+    <main id="main">
+      <section id="dummyProductsContainer"></section>
+      <section id="checkout__total__price"></section>
+    </main>     
+    <div id="cartContainer" class="cart">
+      <div class="cart-header">
+        <h2>Varukorg</h2>
+        <i id="checkoutClose" class="fa-solid fa-x"></i>
+      </div>
+      
+      <div id="cart-body-" class="cart-body">
+        <div class="cart-item">
+          <div class="cart-item-detail">
+            <div class="cart-item-amount">
+              <i id="remove" class="fa-solid fa-minus"></i>
+              <i id="add" class="fa-solid fa-plus"></i>            
+              <span class="cart-item-price">0</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="cart-footer">
+            <div id="totalPrice-checkout" class="cart-footer__total">
+              <strong id="totalPriceTitel">Total</strong>
+              <span id="cart__footer__total" class="cart-total"></span>
+            </div>
+            <button id ="checkout" class="checkout">Checkout</button>
+          </div>
+      </div>
+      
+    <footer>
+      <a href="#home" class="footer__container-title">Wide Range Wares</a>
+      <section class="footer__container">
+      <article class="footer__contact">
+        <h3>Kontakta oss</h3>
+        <p class="footer__contact-info">Adress: Gustavslundsvägen 151 D</p>
+        <p class="footer__contact-info">Postnummmer: 167 51 Bromma</p>
+        <p class="footer__contact-info">Telefonnummer: +46728984858</p>
+        <p class="footer__contact-info">Email: WRW@wrwshop.se</p>
+      </article>
+
+      <article class="footer__links">
+        <h3>Länkar</h3>
+        <ul class="footer__links__container">
+          <li><a id="footerLink" href="#home">Hem</a></li>
+          <li><a id="footerLink"  href="">Om Oss</a></li>
+          <li><a id="footerLink"  href="">Kontakt</a></li>
+        </ul>
+      </article>
+
+      <article class="footer__socials">
+        <h3>Följ oss</h3>
+
+        <div class="footer__socials-links">
+          <div class="footer__socials-link">
+            <a id="socialsIcon" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <p class="footer__socials-name">Facebook</p>
+          </div>
+
+          <div class="footer__socials-link">
+            <a id="socialsIcon" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <p class="footer__socials-name">Twitter</p>
+          </div>
+
+          <div class="footer__socials-link">
+            <a id="socialsIcon" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <p class="footer__socials-name">Instagram</p>
+          </div>
+
+          <div class="footer__socials-link">
+            <a id="socialsIcon" href="#"><i class="fa-solid fa-map-location-dot"></i></a>
+            <p class="footer__socials-name">Maps</p>
+          </div>
+      </article>
+    </section>
+    </footer>
+    <script type="module" src="/src/ts/main.ts"></script>
+   
+  </body>
+</html>

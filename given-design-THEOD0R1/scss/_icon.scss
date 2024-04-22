@@ -1,0 +1,45 @@
+@use "variables" as v;
+@use "mixins";
+
+.down-arrow {
+  display: flex;
+  justify-content: center;
+  a {
+    margin-bottom: 8%;
+
+    div {
+      i {
+        font-size: 20pt;
+        color: white;
+      }
+    }
+  }
+}
+
+.down-arrow__black {
+  div {
+    i {
+      font-size: 20pt;
+      color: black;
+    }
+  }
+}
+
+.social-media {
+  div {
+    width: 35px;
+  }
+  .logo--facebook {
+    i {
+      font-size: 20pt;
+    }
+  }
+}
+
+@include mixins.desktop {
+  .down-arrow {
+    a {
+      margin-bottom: 3%;
+    }
+  }
+}

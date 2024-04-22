@@ -1,0 +1,42 @@
+drop table if exists productcategory;
+
+create table productcategory(
+productId int not null,
+categoryId int not null,
+primary key (productId, categoryId),
+foreign key (productId) REFERENCES products (id),
+foreign key (categoryId) REFERENCES categorys (id)
+);
+
+insert into productcategory (productId, categoryId) values(76, 5), (76, 6),
+(77, 8),
+(78, 7), 
+(79, 7),
+(80, 7), 
+(81, 7), 
+(82, 7), (82, 8), 
+(83, 7), 
+(84, 7), 
+(85, 7), 
+(86, 7), 
+(87, 7), 
+(88, 6), 
+(89, 6), 
+(90, 6), (90, 8), 
+(91, 6), 
+(92, 6), 
+(93, 6), 
+(94, 6), 
+(95, 5), 
+(96, 5), 
+(97, 5), 
+(98, 5), (98, 6), (98, 8), 
+(99, 5), 
+(100, 5), 
+(101, 5), (101, 8), 
+(102, 5), 
+(103, 5), (103, 8), 
+(104, 5), (104, 8), 
+(105, 5), (105, 6), (105, 8), 
+(106, 8), 
+(107, 8);

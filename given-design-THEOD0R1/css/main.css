@@ -1,0 +1,300 @@
+.bar {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 130px;
+  width: 100%;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+  margin-right: 5%;
+  margin-top: 4%;
+  position: absolute;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger input {
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 4.5px;
+  border-radius: 9999px;
+  transition: opacity 0.4s, rotate 0.4s, translate 0.4s, width 0.4s;
+}
+
+.hamburger input {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+}
+
+.hamburger input:checked {
+  background-color: lightblue;
+  opacity: 0;
+}
+
+.hamburger:has(input:checked)::before {
+  rotate: 135deg;
+  translate: 0 9px;
+}
+
+.hamburger:has(input:checked)::after {
+  rotate: -135deg;
+  translate: 0 -10px;
+}
+
+.hamburger:has(input:checked) + .nav__bar {
+  opacity: 1;
+}
+.hamburger:has(input:checked) + .nav__bar a {
+  pointer-events: auto;
+}
+
+.nav__bar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s;
+  opacity: 0;
+  background-color: rgba(129, 129, 129, 0.3);
+}
+.nav__bar nav {
+  margin: 5px;
+  font-size: 16pt;
+  text-align: center;
+}
+.nav__bar nav a {
+  pointer-events: none;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .bar {
+    height: 8%;
+    min-height: 43px;
+  }
+  .bar .hamburger {
+    display: none;
+  }
+  .bar .nav__bar {
+    justify-content: end;
+    align-items: center;
+    opacity: 1;
+  }
+  .bar .nav__bar nav {
+    width: 230px;
+    display: flex;
+  }
+  .bar .nav__bar nav div {
+    margin-right: 12%;
+  }
+  .bar .nav__bar nav div a {
+    pointer-events: auto;
+  }
+  .bar .nav__bar nav div a:hover {
+    text-decoration: underline;
+  }
+}
+header {
+  background-image: url("/assets/negative-space-black-forest-dawn.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
+header .header--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 35%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 20pt;
+  margin-bottom: 80px;
+}
+header .header--info h1 {
+  margin: 0;
+}
+header .header--info .break-point {
+  display: flex;
+  justify-content: center;
+}
+
+main .main-div {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 4% repeat(4, 1fr) 65px;
+}
+main .main-div #about {
+  font-size: 17pt;
+}
+main .main-div #about h1 {
+  margin: 0;
+  margin-top: 5%;
+}
+main .main-div section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+main .main-div .profile-container {
+  display: flex;
+  justify-content: center;
+}
+main .main-div .profile-container img {
+  border-radius: 50%;
+  max-width: 65%;
+  box-shadow: gray 0 0 50px;
+}
+main .main-div .main__text--backround-color {
+  background-color: rgba(128, 128, 128, 0.4);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 4px;
+  max-width: 60%;
+}
+main .main-div .main__text--backround-color .fa {
+  rotate: 180deg;
+  font-size: 25pt;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 510px;
+  background-color: black;
+  font-size: 16pt;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 0;
+}
+footer div section article {
+  color: rgb(255, 255, 255);
+  margin-bottom: 5%;
+}
+footer div section article a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+footer div .social-media article {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  header .header--info {
+    margin-bottom: 0;
+    justify-content: space-around;
+    height: 25%;
+    font-size: 16pt;
+  }
+  header .header--info .break-point {
+    display: inline;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  main .main-div {
+    grid-template-rows: 5% repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+  main .main-div #about {
+    font-size: 15pt;
+  }
+  main .main-div #about h1 {
+    margin-top: 2%;
+  }
+  main .main-div section:nth-child(1) {
+    grid-column: 1/3;
+  }
+  main .main-div section:nth-child(6) {
+    grid-column: 1/3;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  main .main-div section article .profile-container img {
+    max-width: 50%;
+    box-shadow: rgb(128, 128, 128) 0 0 28px;
+  }
+  main .main-div section .main__text--backround-color {
+    padding: 30px;
+    margin: 16px;
+    max-width: 70%;
+  }
+  footer {
+    align-items: center;
+    min-height: 180px;
+    font-size: 14pt;
+  }
+  footer .footer-div {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 2%;
+  }
+}
+.down-arrow {
+  display: flex;
+  justify-content: center;
+}
+.down-arrow a {
+  margin-bottom: 8%;
+}
+.down-arrow a div i {
+  font-size: 20pt;
+  color: white;
+}
+
+.down-arrow__black div i {
+  font-size: 20pt;
+  color: black;
+}
+
+.social-media div {
+  width: 35px;
+}
+.social-media .logo--facebook i {
+  font-size: 20pt;
+}
+
+@media screen and (min-width: 768px) {
+  .down-arrow a {
+    margin-bottom: 3%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

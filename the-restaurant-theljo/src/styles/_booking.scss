@@ -1,0 +1,135 @@
+@use "mixins" as m;
+
+.loading::after {
+  position: absolute;
+  content: "";
+  border: solid rgb(0, 0, 0) 10px;
+  border-bottom: solid rgb(255, 255, 255) 10px;
+  border-left: solid rgb(255, 255, 255) 10px;
+
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  animation: loading 1s infinite;
+}
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.booking__container {
+  background: url("../assets/guiden-till-mysiga-restauranger-i-city.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 430px;
+  .booking__container__inner {
+    width: 80%;
+    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(222, 184, 135, 0.531);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .booking__container__forms {
+      height: fit-content;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.348);
+      h2 {
+        padding-top: 10px;
+        color: black;
+        border-bottom: 2px solid black;
+      }
+      p {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        font-size: 1.3;
+        font-weight: bolder;
+      }
+
+      input {
+        border-radius: 5px;
+        margin: 3px;
+        max-width: 100%;
+        padding: 3px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+        border: none;
+        color-scheme: dark;
+      }
+      ::placeholder {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      button {
+        background-color: rgba(25, 25, 25, 0.9);
+        border: none;
+        border-radius: 3px;
+        color: rgb(255, 255, 255);
+        border: solid 2px rgba(25, 25, 25);
+      }
+      .booking__userInfo__btn {
+        background-color: rgb(60, 60, 60);
+      }
+      select {
+        margin: 3px;
+        border-radius: 3px;
+        color-scheme: dark;
+        border: none;
+        background-color: rgba(25, 25, 25);
+        border: solid rgb(25, 25, 25) 2px;
+      }
+      form {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .full {
+        visibility: hidden;
+      }
+      .empty {
+        visibility: visible;
+      }
+      .booking__userInfo {
+        p {
+          width: 60%;
+          gap: 3px;
+        }
+      }
+    }
+  }
+}
+@include m.desktop {
+  .booking__container {
+    input {
+      padding: 10px;
+    }
+    button {
+      padding: 4px;
+      border-radius: 5px;
+    }
+    select {
+      padding: 4px;
+    }
+    .booking__userInfo__btn {
+      padding: 7px;
+    }
+  }
+}

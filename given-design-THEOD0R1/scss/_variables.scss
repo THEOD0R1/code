@@ -1,0 +1,15 @@
+$text-color: rgb(255, 255, 255);
+$bar-widht: 30px;
+$bar-height: 4.5px;
+$bar-color: rgb(255, 255, 255);
+$bar-background: opacity 0;
+$bar-gap: 5px;
+$bar-radius: 9999px;
+$bar-animation-timing: 0.4s;
+$bar-before-y: calc($bar-height * 2);
+$bar-after-y: calc($bar-gap * -2);
+$main-background-color: rgba(128, 128, 128, 0.4);
+$main-padding-background-color: 30px;
+$main-margin-background-color: 20px;
+$footer-logo-margin: 18px;
+$desktop-size: 768px;

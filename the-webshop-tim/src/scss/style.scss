@@ -1,0 +1,15 @@
+@use "main";
+@use "_mixins" as m;
+@use "shoppingCart";
+@use "footer";
+@use "header";
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  @include m.flex-direction(column);
+  @include m.flex-justify(space-between);
+  min-height: 100vh;
+  margin-top: 0;
+}

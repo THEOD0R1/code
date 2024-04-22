@@ -1,0 +1,51 @@
+@use "mixins" as m;
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  .animal__card {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 360px;
+    align-items: center;
+    background-color: rgb(70, 96, 100);
+    padding: 5%;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    .hungryAnimal,
+    .notHungryAnimal {
+      border-radius: 5px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-bottom: 2px;
+    }
+    .notHungryAnimal {
+      background-color: rgb(46, 81, 46);
+    }
+    .hungryAnimal {
+      background-color: rgb(101, 43, 43);
+    }
+    .animal__card__image_container {
+      width: 60%;
+      img {
+        border-radius: 15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include m.desktop {
+  main {
+    width: 80%;
+    .animal__card {
+      width: 20%;
+      min-width: 300px;
+      padding: 1%;
+      margin: 30px;
+    }
+  }
+}

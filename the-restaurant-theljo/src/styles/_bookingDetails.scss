@@ -1,0 +1,49 @@
+@use "mixins" as m;
+
+.pageContainer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(199, 160, 118);
+
+  .theBooking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    width: 50%;
+    padding: 20px;
+    min-height: 80%;
+    border-radius: 10px;
+    button {
+      border-radius: 5px;
+      width: 100px;
+      border: solid black 2px;
+      color: rgb(255, 255, 255);
+    }
+    .update__booking {
+      background-color: green;
+      margin-bottom: 20px;
+    }
+    .delete__booking {
+      background-color: rgba(255, 0, 0);
+    }
+    .bookingInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
+  }
+}
+
+@include m.desktop {
+  .pageContainer {
+    .theBooking {
+      width: 30%;
+    }
+  }
+}

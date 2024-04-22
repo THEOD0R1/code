@@ -1,0 +1,22 @@
+drop table if exists orderlist;
+
+create table orderlist(
+id int not null auto_increment,
+amount int not null,
+productId int not null,
+orderId int not null,
+primary key (id),
+foreign key (productId) references products(id),
+foreign key (orderId) references orders(id)
+);
+
+insert into orderlist(amount, productId, orderId) values(1, 76, 276), (4, 95, 276), (1, 96, 276),
+(1, 76, 277), (5, 95, 277), (1, 96, 277),
+(1, 105, 315), (1, 95, 315), (1, 96, 315), (1, 97, 315),
+(1, 105, 316), (1, 95, 316), (1, 96, 316), (1, 97, 316),
+(1, 91, 317), (1, 76, 317),
+(3, 76, 318),
+(1, 96, 319), (1, 76, 319), (1, 77, 319),
+(1, 96, 320), (1, 91, 320),
+(2, 98, 360), (1, 89, 360), (1, 103, 360),
+(2, 98, 361), (1, 89, 361), (1, 103, 361);

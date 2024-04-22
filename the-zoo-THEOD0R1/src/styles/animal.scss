@@ -1,0 +1,37 @@
+@use "mixins" as m;
+
+.animal__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  background-color: rgb(55, 73, 55);
+  padding-top: 30px;
+  .animal__information__img_container {
+    width: 50%;
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .animal__information__description {
+    width: 90%;
+  }
+}
+
+@include m.desktop {
+  .animal__information {
+    font-size: 15pt;
+    border-radius: 20px;
+    width: 80%;
+    min-height: 80vh;
+
+    .animal__information__img_container {
+      width: 35%;
+    }
+    .animal__information__description {
+      width: 70%;
+    }
+  }
+}

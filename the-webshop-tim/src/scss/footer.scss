@@ -1,0 +1,85 @@
+@use "_mixins" as m;
+
+footer {
+  background: linear-gradient(to right, black, grey);
+  color: white;
+  @include m.flex-direction(column);
+
+  .footer__container {
+    &-title {
+      display: flex;
+      margin: 20px 0px 10px 20px;
+      color: white;
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-family: "DM Serif Display", serif;
+
+      @include m.tablet() {
+        margin: 20px 0px 10px 55px;
+      }
+    }
+
+    @include m.tablet() {
+      @include m.flex-direction(row);
+      @include m.flex-justify(space-between);
+      margin: 0px 40px 20px 40px;
+    }
+  }
+
+  .footer__contact {
+    margin-left: 20px;
+
+    &-info {
+      line-height: 5px;
+    }
+  }
+
+  .footer__links {
+    margin-left: 20px;
+
+    @include m.tablet() {
+      margin-bottom: 15px;
+    }
+
+    &__container {
+      list-style: none;
+      padding: 0px;
+    }
+  }
+
+  .footer__socials {
+    margin-left: 20px;
+
+    &-link {
+      @include m.flex-direction(row);
+
+      @include m.tablet() {
+        height: 15px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &-name {
+      margin: 8px 2px 25px 10px;
+      line-height: 0px;
+      margin-bottom: 15px;
+      margin-right: 25px;
+    }
+
+    @include m.tablet() {
+      height: 15px;
+      margin-bottom: 5px;
+      margin-right: 25px;
+    }
+  }
+}
+
+#footerLink {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#socialsIcon {
+  color: white;
+}

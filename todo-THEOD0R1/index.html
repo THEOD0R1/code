@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo or not todo?</title>
+    <script
+      src="https://kit.fontawesome.com/2f205e53c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <section><h1>Att göra-lista</h1></section>
+      <section class="createToDoContainer">
+        <form id="submitToDoList">
+          <div class="submitToDoListContainer">
+            <label for="nameUserInput">Vad ska du göra?</label>
+            <input type="text" id="nameUserInput" required />
+          </div>
+          <div class="submitToDoListContainer">
+            <label for="descriptionUserInput">Hur ska du gör det?</label>
+            <input type="text" id="descriptionUserInput" />
+          </div>
+
+          <button class="buttonAdd">Lägg till</button>
+        </form>
+      </section>
+    </header>
+    <main>
+      <section class="toDoContainer">
+        <article id="toDoList">
+          <h2>Att göra-lista</h2>
+        </article>
+        <article id="notTodo">
+          <h3>Genomförd lista</h3>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

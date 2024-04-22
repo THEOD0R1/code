@@ -1,0 +1,39 @@
+@use "mixins" as m;
+.hungry__animals__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .hungry_animals__ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    .hungry_animals__li {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      background-color: rgb(129, 59, 59);
+      border-radius: 15px;
+      padding: 3%;
+      margin: 3%;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+@include m.desktop {
+  .hungry__animals__container {
+    font-size: 15pt;
+    .home__hunger__status {
+      font-size: 30pt;
+    }
+    .hungry_animals__ul {
+      .hungry_animals__li {
+        width: 20%;
+      }
+    }
+  }
+}

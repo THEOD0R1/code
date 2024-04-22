@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+
+/* Main Styles */
+.select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.select-wrapper header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  text-align: center;
+  background: #ffcfcf;
+}
+
+.select-wrapper header h1 {
+  font-family: "Irish Grover", system-ui;
+  color: #8e8181;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* Body Styles */
+.select-wrapper .select-body {
+  background: #f3b846;
+  height: 100%;
+  flex: 20;
+}
+
+.select-wrapper .select-body .top-heading {
+  margin-top: 14px;
+}
+
+.select-body .top-heading h3 {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-family: "Irish Grover", system-ui;
+  color: #e50a91;
+}
+
+/* Footer Styles */
+.select-wrapper footer {
+  flex: 1;
+  padding: 1.77rem;
+  background-color: #ffcfcf;
+}
+
+/* Text Center Styles */
+.select-txt-center {
+  text-align: center;
+}
+
+/* Select Content Styles */
+.select-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  place-items: center;
+  margin-top: 120px;
+}
+
+/* Select Button Styles */
+.left-select-button,
+.right-select-button {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 30px;
+  margin-left: 30px;
+  background-color: white;
+  color: black;
+  border: 5px solid rgb(119, 114, 114);
+  cursor: pointer;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: "DM Serif Display", serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.upper-left-img img,
+.upper-right-img img {
+  max-width: 700px;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+  .select-wrapper header {
+    padding: 5px 8px;
+  }
+
+  .select-wrapper header h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .select-wrapper .select-body .top-heading h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .input-field {
+    font-size: 20px;
+  }
+
+  .select-btn {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .select-content {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+
+  .left-select-button,
+  .right-select-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 10px 30px;
+    width: 150px;
+  }
+
+  .upper-left-img img,
+  .upper-right-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .upper-left-img,
+  .left-select-button,
+  .upper-right-img,
+  .right-select-button {
+    order: unset;
+  }
+
+  .upper-left-img {
+    order: 1;
+  }
+
+  .left-select-button {
+    order: 2;
+  }
+
+  .upper-right-img {
+    order: 3;
+  }
+
+  .right-select-button {
+    order: 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .select-wrapper header {
+    padding: 5px 8px;
+  }
+
+  .select-wrapper header h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .select-wrapper .select-body .top-heading h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .input-field {
+    font-size: 16px;
+  }
+
+  .select-btn {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .select-content {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .left-select-button,
+  .right-select-button {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 10px 0;
+    width: 200px; 
+  }
+
+  .upper-left-img img,
+  .upper-right-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .upper-left-img,
+  .left-select-button,
+  .upper-right-img,
+  .right-select-button {
+    order: unset;
+  }
+
+  .upper-left-img {
+    order: 1;
+  }
+
+  .left-select-button {
+    order: 2;
+  }
+
+  .upper-right-img {
+    order: 3;
+  }
+
+  .right-select-button {
+    order: 4;
+  }
+}

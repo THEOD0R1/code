@@ -1,0 +1,120 @@
+@use "mixins";
+:root {
+  background-color: rgb(53, 55, 90);
+  color: rgb(221, 221, 221);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  header {
+    display: flex;
+    flex-direction: column;
+    #submitToDoList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .submitToDoListContainer {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  main {
+    width: 100%;
+
+    .toDoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      #toDoList {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ol {
+          background-color: rgb(78, 80, 131);
+          padding: 20px;
+          width: 80%;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          gap: 10px;
+          height: 100%;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(51, 54, 95);
+            border-radius: 10px;
+
+            .delCompContainer {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+            .descriptionContainer {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              overflow: auto;
+
+              h4 {
+                font-size: 1.5rem;
+                margin: 4px;
+              }
+            }
+            .upDownContainer {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      #notTodo {
+        margin-top: 10%;
+        max-width: 100%;
+        p,
+        h4 {
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.desktop {
+  body {
+    main {
+      margin-top: 50px;
+      max-width: 90%;
+      background-color: rgb(49, 49, 107);
+      border-radius: 10px;
+      padding-bottom: 3%;
+      .toDoContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        #toDoList {
+          max-width: 70%;
+        }
+        #notTodo {
+          max-width: 40%;
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+}

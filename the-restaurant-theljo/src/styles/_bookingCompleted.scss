@@ -1,0 +1,35 @@
+@use "mixins" as m;
+.BookingCompleted__Container {
+  background: url("../assets/st-826688_1280.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.56);
+    width: 100%;
+    h1 {
+      font-size: 17pt;
+      color: rgb(0, 0, 0);
+      text-decoration: underline black;
+    }
+  }
+}
+
+@include m.desktop {
+  .BookingCompleted__Container {
+    article {
+      width: 50%;
+      border-radius: 10px;
+      h1 {
+        font-size: 25pt;
+      }
+    }
+  }
+}

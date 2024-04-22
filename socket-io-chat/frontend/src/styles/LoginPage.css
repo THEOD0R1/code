@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+
+/* Main Styles */
+.login-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.login-wrapper header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  text-align: center;
+  background: #ffcfcf;
+}
+.name-already-taken {
+  color: red;
+  margin-top: 10px;
+  font-size: 15pt;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-wrapper header h1 {
+  font-family: "Irish Grover", system-ui;
+  color: #8e8181;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* Body Styles */
+.login-wrapper .login-body {
+  background: #f3b846;
+  height: 100%;
+  flex: 20;
+}
+
+.login-wrapper .login-body .top-heading {
+  margin-top: 14px;
+}
+
+.login-body .top-heading h3 {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-family: "Irish Grover", system-ui;
+  color: #e50a91;
+}
+
+/* Bottom Content Styles */
+.login-wrapper .login-body .bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+/* Footer Styles */
+.login-wrapper footer {
+  flex: 1;
+  padding: 1.77rem;
+  background-color: #ffcfcf;
+}
+
+/* Text Center Styles */
+.login-txt-center {
+  text-align: center;
+}
+
+/* Input Field Styles */
+.input-field {
+  display: block;
+  padding: 0.77rem 10px;
+  width: 170px !important;
+  background-color: #fff;
+  color: #353333;
+  border: 2px solid #fff;
+  border-radius: 14px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-left: 30px;
+}
+
+/* Login Button Styles */
+.login-btn {
+  color: #000;
+  background: #f09494;
+  border: 2px solid #f09494;
+  border-radius: 30px;
+  padding: 4px 6px;
+  width: 170px !important;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* Media */
+@media (max-width: 780px) {
+  .login-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .login-wrapper .bottom-content {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+  }
+
+  .login-wrapper .bottom-content .login-form {
+    position: absolute;
+    top: 20rem;
+  }
+
+  .login-wrapper .bottom-content .right-img,
+  .login-body .top-heading {
+    display: none !important;
+  }
+
+  .login-wrapper header h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-field {
+    margin-left: 5px;
+  }
+}
